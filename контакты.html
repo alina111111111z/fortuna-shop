@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Фортуна</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contacts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contacts-header {
+            margin-bottom: 30px;
+            color: #ff9800;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-card {
+            flex: 1 1 calc(33% - 20px);
+            background: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(255, 152, 0, 0.3);
+        }
+
+        .contact-card h3 {
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 16px;
+        }
+
+        .contact-form {
+            margin-top: 40px;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(255, 152, 0, 0.3);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .contact-form h2 {
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        .contact-form button {
+            background: #ff9800;
+            color: #121212;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .contact-form button:hover {
+            background: #e07b00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ФОРТУНА</div>
+            <nav>
+                <a href="index.php">Главная</a>
+                <a href="каталог.html">Каталог</a>
+                <a href="контакты.html">Контакты</a>
+                    <a href="index.php">Выход</a>
+                    <a href="login.php">Вход</a>
+                    <a href="register.php">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="contacts-container">
+        <h1 class="contacts-header">Свяжитесь с нами</h1>
+        <p>Мы всегда рады помочь вам! Ниже вы найдете наши контакты, а также форму для обратной связи.</p>
+        
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>Адрес</h3>
+                <p>Омск, ул. Семиреченская 95/1</p>
+            </div>
+            <div class="contact-card">
+                <h3>Телефон</h3>
+                <p>+7 (900) 123-45-67</p>
+            </div>
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>info@fortuna.ru</p>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Оставьте сообщение</h2>
+            <form action="send_message.php" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Фортуна | Омск, ул. Семиреченская 95/1</p>
+        </div>
+    </footer>
+</body>
+</html>
